@@ -128,14 +128,19 @@ def menu():
 
         if escolha == '1':
             nome = input("Nome do Proprietário: ")
+            print('-----------------------------')
             adicionar_proprietario(nome)
         elif escolha == '2':
             endereco = input("Endereço do Imóvel: ")
+            print('-----------------------------')
             proprietario_id = int(input("ID do Proprietário: "))
+            print('-----------------------------')
             adicionar_imovel(endereco, proprietario_id)
         elif escolha == '3':
             data_inicio = input("Data de Início da Locação (YYYY-MM-DD): ")
+            print('-----------------------------')
             imovel_id = int(input("ID do Imóvel: "))
+            print('-----------------------------')
             adicionar_locacao(data_inicio, imovel_id)
         elif escolha == '4':
             listar_proprietarios()
@@ -145,11 +150,13 @@ def menu():
             listar_locacoes()
         elif escolha == '7':
             imovel_id = int(input("ID do Imóvel a ser Excluído: "))
+            print('-----------------------------')
             excluir_imovel(imovel_id)
         elif escolha == '0':
             break
         else:
             print("Opção inválida! Tente novamente.")
+            print('-----------------------------')
 
 if __name__ == "__main__":
     menu()
